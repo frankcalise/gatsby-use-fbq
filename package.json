@@ -1,0 +1,25 @@
+{
+  "name": "gatsby-use-fbq",
+  "version": "1.0.0",
+  "description": "A reusable hook and higher order component to give access to Facebook Pixel's track event method when using gatsby-plugin-pixel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frankcalise/gatsby-use-fbq.git"
+  },
+  "keywords": [
+    "gatsby",
+    "facebook",
+    "pixel",
+    "fbq"
+  ],
+  "author": "Frank Calise <fcalise@gmail.com> (https://frankcalise.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frankcalise/gatsby-use-fbq/issues"
+  },
+  "homepage": "https://github.com/frankcalise/gatsby-use-fbq#readme"
+}
