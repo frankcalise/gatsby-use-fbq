@@ -1,3 +1,3 @@
 import useFbq from './useFbq'
 
-export { useFbq }
+export default useFbq
