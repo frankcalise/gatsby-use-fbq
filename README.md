@@ -34,14 +34,21 @@ import useFbq from "../../hooks/useFbq";
 function MyComponent() {
   const fbq = useFbq();
 
-  fbq("AddToCart", {
-    content_ids: ['product-id'],
-    num_items: 1,
-    currency: "USD",
-    value: 10.00
-  });
+  function addToCart() {
+    fbq("AddToCart", {
+      content_ids: ['product-id'],
+      num_items: 1,
+      currency: "USD",
+      value: 10.00
+    });
 
-  // ...
+    // ...
+  }
+
+  return (
+    <div>
+      <button onClick={addToCart}>Add To Cart</button>
+    </div>)
 }
 ```
 
