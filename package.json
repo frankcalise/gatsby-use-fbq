@@ -2,8 +2,11 @@
   "name": "gatsby-use-fbq",
   "version": "1.0.0",
   "description": "A reusable hook and higher order component to give access to Facebook Pixel's track event method when using gatsby-plugin-pixel",
-  "main": "index.js",
+  "main": "dist/gatsby-use-fbq.cjs.js",
+  "module": "dist/gatsby-use-fbq.esm.js",
   "scripts": {
+    "build": "kcd-scripts build --bundle",
+    "lint": "kcd-scripts lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +24,21 @@
   "bugs": {
     "url": "https://github.com/frankcalise/gatsby-use-fbq/issues"
   },
-  "homepage": "https://github.com/frankcalise/gatsby-use-fbq#readme"
+  "homepage": "https://github.com/frankcalise/gatsby-use-fbq#readme",
+  "peerDependencies": {
+    "gatsby-plugin-facebook-pixel": ">=1.0",
+    "react": ">=16.8.4"
+  },
+  "devDependencies": {
+    "kcd-scripts": "4.1.0",
+    "react": "16.8.4"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/kcd-scripts/eslint.js"
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "coverage",
+    "dist"
+  ]
 }
