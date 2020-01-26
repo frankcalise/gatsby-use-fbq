@@ -13,7 +13,7 @@ In my Gatsby projects, I wanted to use Facebook Pixel for tracking events. The [
 
 ## This Solution
 
-The author of the plugin describes the way to do this as 
+The author of the plugin describes the way to do this as
 
 > It might be best to call the fbq global from the specific page, through `componentDidMount` or `useEffect`.
 
@@ -27,8 +27,24 @@ This solution provides a Hook and Higher-Order Component to do just that. It che
 
 ### Hook
 
-Description here
+```javascript
+import React from "react";
+import useFbq from "../../hooks/useFbq";
+
+function MyComponent() {
+  const fbq = useFbq();
+
+  fbq("AddToCart", {
+    content_ids: ['product-id'],
+    num_items: 1,
+    currency: "USD",
+    value: 10.00
+  });
+
+  // ...
+}
+```
 
 ### Higher-Order Component
 
-Descripton here
+Coming soon :)
