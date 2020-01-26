@@ -29,17 +29,17 @@ This solution provides a Hook and Higher-Order Component to do just that. It che
 
 ```javascript
 import React from "react";
-import useFbq from "../../hooks/useFbq";
+import useFbq from "gatsby-use-fbq";
 
 function MyComponent() {
   const fbq = useFbq();
 
   function addToCart() {
     fbq("AddToCart", {
-      content_ids: ['product-id'],
+      content_ids: ["product-id"],
       num_items: 1,
       currency: "USD",
-      value: 10.00
+      value: 10.0
     });
 
     // ...
@@ -48,10 +48,37 @@ function MyComponent() {
   return (
     <div>
       <button onClick={addToCart}>Add To Cart</button>
-    </div>)
+    </div>
+  );
 }
 ```
 
 ### Higher-Order Component
+
+```javascript
+import React from "react";
+import { withFbq } from "gatsby-use-fbq";
+
+class MyComponent extends React.Component {
+  addToCart = () => {
+    this.props.fbq("AddToCart", {
+      content_ids: ["product-id"],
+      num_items: 1,
+      currency: "USD",
+      value: 10.0
+    });
+
+    // ...
+  };
+
+  render() {
+    return (
+      <div>
+        <button onClick={this.addToCart}>Add To Cart</button>
+      </div>
+    );
+  }
+}
+```
 
 Coming soon :)
